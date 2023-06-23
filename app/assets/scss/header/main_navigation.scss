@@ -1,0 +1,22 @@
+.main_nav {
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, .2);
+
+  &_bar {
+    height: 78px;
+  }
+  &-link {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    transition: all .1s ease-in-out;
+    width: 194px;
+
+    &:hover {
+      background-color: #FFFFFF;
+      color: #000000;
+      cursor: pointer;
+    }
+  }
+}

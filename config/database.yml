@@ -1,0 +1,29 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: groove_core_development
+  username: groovecore_admin
+  password: gc_js_t
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: groove_core_test
+  username: groovecore_admin
+  password: gc_js_t
+  host: localhost
+  port: 5432
+
+production:
+  <<: *default
+  database: groove_core_production
+  username: groovecore_admin
+  password: gc_js_t
+  host: your_production_host
+  port: your_production_port

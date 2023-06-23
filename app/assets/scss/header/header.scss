@@ -1,0 +1,25 @@
+.top_bar_logo {
+  max-height: 100%;
+  max-width: 100%;
+  &-circle {
+    height: 200px;
+    width: 200px;
+    background-color: #DEDEDE;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    box-shadow: 0 0 20px #FFFFFF;
+  }
+}
+
+.rotating {
+  animation: rotating 3s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
