@@ -1,25 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What is this about?
+GrooveCore is an app for a label to be promoted with different event planners, clubs, bars and musicians such as DJs, Producers and Live Performers
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # groove_core
