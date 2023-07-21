@@ -10,16 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_15_053924) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_21_043622) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "file_type"
+    t.string "file_path"
+    t.string "title"
+    t.text "description"
+    t.string "location_link"
+    t.date "event_date"
+    t.decimal "event_ticket_price", precision: 10, scale: 2
+    t.string "mediable_type"
+    t.bigint "mediable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mediable_type", "mediable_id"], name: "index_media_on_mediable"
+  end
+
+  create_table "showcases", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string "email"
-    t.boolean "admin", default: false
     t.string "password_digest"
+    t.boolean "admin", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

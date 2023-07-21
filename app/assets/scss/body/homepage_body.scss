@@ -1,14 +1,15 @@
 .homepage-section {
   &__wrapper {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     padding: 1rem 1.5rem;
-    border: 2px solid rgba(255, 255, 255, .5);
-    border-radius: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, .5);
+    // border-radius: 1rem;
 
     h1 { color: rgba(255, 255, 255, .5); }
 
     &:hover {
-      box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+      border-top: 2px solid rgba(255, 255, 255, 1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, .8);
       cursor: pointer;
 
       h1 {
@@ -16,7 +17,24 @@
       }
     }
 
-    &.expanded { box-shadow: 0 0 10px rgba(255, 255, 255, .8); }
+    &.expanded {
+      border-top: 2px solid rgba(255, 255, 255, 1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, .8);
+
+      h1 { color: rgba(255, 255, 255, .8); }
+    }
+  }
+  &__container {
+    i {
+      color: white;
+      top: 0;
+      right: 0;
+      transition: all .2s ease-in-out;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
   }
   &__content {
     color: rgba(255, 255, 255, .8);

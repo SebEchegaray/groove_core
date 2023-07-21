@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  file_type: MyString
+  file_path: MyString
+  title: MyString
+  description: MyText
+  location_link: MyString
+  event_date: 2023-07-21
+  event_ticket_price: 9.99
+
+two:
+  file_type: MyString
+  file_path: MyString
+  title: MyString
+  description: MyText
+  location_link: MyString
+  event_date: 2023-07-21
+  event_ticket_price: 9.99
