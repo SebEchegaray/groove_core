@@ -1,0 +1,21 @@
+<%= form_with(model: @event) do |form| %>
+  <!-- Other event fields -->
+  <%= form.fields_for :media do |media_form| %>
+    <%= media_form.label :file_type %>
+    <%= media_form.text_field :file_type %>
+
+    <%= media_form.label :file_path %>
+    <%= media_form.text_field :file_path %>
+
+    <%= media_form.label :title %>
+    <%= media_form.text_field :title %>
+
+    <%= media_form.label :description %>
+    <%= media_form.text_area :description %>
+
+    <!-- Add other media fields -->
+
+  <% end %>
+
+  <%= form.submit %>
+<% end %>
