@@ -21,9 +21,6 @@ test:
   port: 5432
 
 production:
-  <<: *default
-  database: groove_core_production
-  username: groovecore_admin
-  password: gc_js_t
-  host: your_production_host
-  port: your_production_port
+  url: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['YOUR_DB_USERNAME'] %>
+  password: <%= ENV['YOUR_DB_PASSWORD'] %>
