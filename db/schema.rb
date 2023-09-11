@@ -10,47 +10,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_21_043622) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_08_112429) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "dj_lineup"
+    t.date "event_date"
     t.string "location"
+    t.decimal "ticket_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "media", force: :cascade do |t|
-    t.string "file_type"
-    t.string "file_path"
-    t.string "title"
-    t.text "description"
-    t.string "location_link"
-    t.date "event_date"
-    t.decimal "event_ticket_price", precision: 10, scale: 2
-    t.string "mediable_type"
-    t.bigint "mediable_id"
+  create_table "past_events", force: :cascade do |t|
+    t.bigint "event_id", null: false
+    t.text "photos"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["mediable_type", "mediable_id"], name: "index_media_on_mediable"
+    t.index ["event_id"], name: "index_past_events_on_event_id"
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "genre"
+    t.string "duration"
+    t.string "artist"
+    t.text "soundcloud_embed_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "showcases", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "location"
+    t.string "location_link"
+    t.string "dj_lineup"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
+    t.string "username"
     t.string "password_digest"
-    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "past_events", "events"
 end
