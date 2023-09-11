@@ -1,6 +1,6 @@
 class CreateSessions < ActiveRecord::Migration[7.0]
   def change
-    create_table :sessions do |t|
+    create_table :sessions, if_not_exists: true do |t|
       t.string :title
       t.text :description
       t.string :genre
