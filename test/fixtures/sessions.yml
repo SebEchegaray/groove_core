@@ -3,13 +3,15 @@
 one:
   title: MyString
   description: MyText
-  location: MyString
-  location_link: MyString
-  dj_lineup: MyString
+  genre: MyString
+  duration: MyString
+  artist: MyString
+  soundcloud_embed_code: MyText
 
 two:
   title: MyString
   description: MyText
-  location: MyString
-  location_link: MyString
-  dj_lineup: MyString
+  genre: MyString
+  duration: MyString
+  artist: MyString
+  soundcloud_embed_code: MyText

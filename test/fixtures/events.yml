@@ -3,9 +3,15 @@
 one:
   title: MyString
   description: MyText
+  dj_lineup: MyString
+  event_date: 2023-09-08
   location: MyString
+  ticket_price: 9.99
 
 two:
   title: MyString
   description: MyText
+  dj_lineup: MyString
+  event_date: 2023-09-08
   location: MyString
+  ticket_price: 9.99

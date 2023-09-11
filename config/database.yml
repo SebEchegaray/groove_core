@@ -22,8 +22,8 @@ test:
 
 production:
   <<: *default
-  database: groove_core_production
-  username: groovecore_admin
-  password: gc_js_t
-  host: your_production_host
-  port: your_production_port
+  database: dbvo22nhno3gse
+  username: obbskwdrpvbsgm
+  password: 905b844f6f1121e05077f08799f327dff2a64e9c7157e8f5aa98c3b1aaa7433a
+  host: ec2-44-206-204-65.compute-1.amazonaws.com
+  port: 5432
