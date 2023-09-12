@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
   end
 
+  resources :past_events, only: [:index, :show]
   resources :events, only: [:new, :create]
   resources :showcases, only: [:new, :create]
 end

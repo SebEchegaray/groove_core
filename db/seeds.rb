@@ -31,10 +31,11 @@ def process_directory(directory_path)
       end
 
       # Attach the file to the PastEvent record based on the file type
-      if file_extension == '.jpg'
+      if file_extension == '.JPG'
         past_event.photos.attach(io: File.open(entry), filename: File.basename(entry))
-      elsif file_extension == '.mp4'
+      elsif file_extension == '.MP4'
         past_event.videos.attach(io: File.open(entry), filename: File.basename(entry))
+        puts File.basename(entry)
       end
     end
   end
